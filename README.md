@@ -21,5 +21,8 @@ We compare three main approaches, a) trad: traditional training, b) linear:fine-
 * `dev-llm-finetune-sentimental-classification-Linear-basefrozen.ipynb`, fine-tuning a LLM for sentimental classification on idbm dataset where base model is frozen and only a linear decision layer is trained.
 
 ##### Result
+As expected, traditional finetuning result in the highest accuracy, at 92%. The accuracy of LORA is a little bit lower, at 89%, as LORA focusing on finetuning the attention component of the model instead of adjusting the parameters of the whole network. We observe the accuracy of linear approach is significantly lower when compared to RNN baseline. This result suggest that extra caution should be paid when using linear approach for fine tuning.
+![Bar plot accuracy]([http://url/to/img.png](https://github.com/phananh1010/llm-use-cases/blob/master/fig_barplot_accuracy.pdf))
 
-
+We also measure the inference latency of the there approaches. We see a slight decrease in latency in LORA compared to traditional fine-tuning. Latency of Linear is significantly lower.  
+![Bar plot accuracy]([http://url/to/img.png](https://github.com/phananh1010/llm-use-cases/blob/master/fig_barplot_latency.pdf))
