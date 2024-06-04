@@ -22,9 +22,9 @@ We compare three main approaches, a) trad: traditional training, b) linear:fine-
 
 ##### Result
 As expected, traditional finetuning result in the highest accuracy, at 92%. The accuracy of LORA is a little bit lower, at 89%, as LORA focusing on finetuning the attention component of the model instead of adjusting the parameters of the whole network. We observe the accuracy of linear approach is significantly lower when compared to RNN baseline. This result suggest that extra caution should be paid when using linear approach for fine tuning.
+<img src="https://github.com/phananh1010/llm-use-cases/blob/master/fig_barplot_accuracy.jpg" width="300">
 
-![Bar plot accuracy](https://github.com/phananh1010/llm-use-cases/blob/master/fig_barplot_accuracy.jpg | width=100)
 
 We also measure the inference latency of the there approaches. We see a slight decrease in latency in LORA compared to traditional fine-tuning. Latency of Linear is significantly lower.  
+<img src="https://github.com/phananh1010/llm-use-cases/blob/master/fig_barplot_latency.jpg" width="300">
 
-![Bar plot accuracy](https://github.com/phananh1010/llm-use-cases/blob/master/fig_barplot_latency.jpg | width=100)
